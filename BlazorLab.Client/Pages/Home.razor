@@ -5,3 +5,22 @@
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+<select @onchange="Callback">
+    <option value="1">Uno</option>
+    <option value="2">Due</option>
+    <option value="3">Tre</option>
+</select>
+
+<p role="status">Hai selezionato: @pippo</p>
+
+
+@code {
+    private string pippo = "";
+
+    private void Callback(ChangeEventArgs obj)
+    {
+        pippo = obj.Value.ToString();
+    }
+
+}
